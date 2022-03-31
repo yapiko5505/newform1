@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>Formkanri</title>
 </head>
 <body>
     <?php
+
+        $code=$_POST['code'];
+
         $dsn = 'mysql:dbname=newform;host=localhost';
         $user = 'root';
         $password = '';
         $dbh = new PDO($dsn, $user, $password);
         $dbh->query('SET NAMES utf8');
 
-        $sql = 'SELECT * FROM message WHERE 1';
+        $sql = 'SELECT * FROM message WHERE code=?';
         $stmt = $dbh->prepare($sql);
-        $stmt->execute();
+        $data[] = $code;
+        $stmt->execute($data);
 
         while(1)
         {
@@ -36,7 +40,6 @@
         $dbh = null;
 
     ?>
-
-<br><a href="kanri.html">管理メニューに戻る</a>
+    <br><a href="kensaku.html">検索メニューに戻る</a>
 </body>
 </html>
