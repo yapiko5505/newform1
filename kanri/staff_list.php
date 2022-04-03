@@ -1,3 +1,21 @@
+<?php
+    session_start();
+    session_regenerate_id(true);
+    if(isset($_SESSION['login'])==false)
+    {
+        print 'ログインされていません。<br>';
+        print '<a href="../stafflogin/staff_login.html">ログイン画面へ</a>';
+        exit();
+    }
+    else
+    {
+        print $_SESSION['staff_name'];
+        print 'さんログイン中<br>';
+        print '<br>';
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -56,7 +74,7 @@
 
         ?>
 
-        <a href = "kanri.html">戻る</a>
+        <a href = "../stafflogin/kanri.php">戻る</a>
     
     
 </body>

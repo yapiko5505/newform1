@@ -22,11 +22,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>Formkanri</title>
 </head>
 <body>
-    スタッフが選択されていません。<br>
-    <a href = "staff_list.php">戻る</a>
+    管理メニュー<br>
+    <br><br>
+    <a href="../kanri/ichiran.php">案件一覧</a><br><br><br>
+    <a href="../kanri/kensaku.html">案件検索</a><br><br><br>
+    <a href="../kanri/staff_list.php">スタッフ一覧</a><br><br><br>
+    <a href="../kanri/staff_add.php">スタッフ追加</a><br><br><br>
+    <a href="staff_logout.php">ログアウト</a><br>
     
 </body>
 </html>

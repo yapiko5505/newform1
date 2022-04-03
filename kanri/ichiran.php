@@ -37,6 +37,6 @@
 
     ?>
 
-<br><a href="kanri.html">管理メニューに戻る</a>
+<br><a href="../stafflogin/kanri.php">管理メニューに戻る</a>
 </body>
 </html>
